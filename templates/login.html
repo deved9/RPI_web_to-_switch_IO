@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="{{ url_for('api_login')}}" method="post">
+            <label for="username">Username</label>
+            <br>
+            <input maxlength="256" name="username" id="username">
+            <br>
+            <label for="pass" >Password</label>
+            <br>
+            <input maxlength="256" name="pass" type="password" id="pass" required="">
+            <br>
+            <input type="checkbox" name="stay" id="stay">
+            <label for="stay">Stay logged-in on this IP</label>
+            <br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

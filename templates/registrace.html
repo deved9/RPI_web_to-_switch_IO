@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <form action="{{ url_for('api_reg')}}" method="post">
+            <label for="name">First Name</label>
+            <br>  
+            <input maxlength="256" name="name" data-name="Name" type="text" id="name" required="">
+            <br>
+            <label for="surename">Last Name</label>
+            <br>
+            <input maxlength="256" name="surename" data-name="surename" type="text" id="surename" required="">
+            <br>
+            <label for="username">Username</label>
+            <br>
+            <input maxlength="256" name="username" data-name="username"type="text" id="username" required="">
+            <br>
+            <label for="pass" >Password</label>
+            <br>
+            <input maxlength="256" name="pass" data-name="pass"  type="password" id="pass" required="">
+            <br>
+            <input type="submit">
+        </form>
+        <a href="{{ url_for('login')}}">Log in</a>
+    </body>
+</html>

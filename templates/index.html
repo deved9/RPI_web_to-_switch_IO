@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>The main goal</title>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script type = "application/javascript" src = "{{ url_for('static', filename = 'post_req.js') }}" ></script>
+   </head>
+   
+   <body>
+      <input type = "button" onclick = "switch_pin(1)" value = "1" />
+      <input type = "button" onclick = "switch_pin(2)" value = "2" />
+      <input type = "button" onclick = "switch_pin(3)" value = "3" />
+      <input type = "button" onclick = "switch_pin(4)" value = "4" />
+      <input type = "button" onclick = "switch_pin(5)" value = "5" />
+      <input type = "button" onclick = "switch_pin(6)" value = "6" />
+      <input type = "button" onclick = "switch_pin(7)" value = "7" />
+      <input type = "button" onclick = "switch_pin(8)" value = "8" />
+      <table border = 1 id = "table">
+         <tr>
+         {% for key, value in result %}
+            <th>{{ key }}</th>
+         {% endfor %}
+         </tr>
+         <tr>
+         {% for key, value in result %}
+            <td>{{ value }}</td>
+         {% endfor %}
+         </tr>
+      </table>
+      <a href="{{url_for('logout')}}">Log out</a>
+   </body>
+</html>
